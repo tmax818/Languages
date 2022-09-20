@@ -53,29 +53,19 @@
     </c:forEach>
     </tbody>
 </table>
+<h2>New Language</h2>
+<form:form class="form" action="/languages" method="post" modelAttribute="language">
+    <div class="form-control">
+    <form:label path="name">Name</form:label>
+    <form:errors path="name"/>
+    <form:input path="name"/>
+    </div>
+    <div class="form-control">
+    <form:label path="creator">Creator</form:label>
+    <form:errors path="creator"/>
+    <form:input path="creator"/>
+    </div>
 
-<h1>New Expense</h1>
-<form:form action="/expenses" method="post" modelAttribute="langauge">
-    <p>
-        <form:label path="name">Name</form:label>
-        <form:errors path="name"/>
-        <form:input path="name"/>
-    </p>
-    <p>
-        <form:label path="vendor">Vendor</form:label>
-        <form:errors path="vendor"/>
-        <form:input path="vendor"/>
-    </p>
-    <p>
-        <form:label path="amount">Amount</form:label>
-        <form:errors path="amount"/>
-        <form:input type="number" path="amount"/>
-    </p>
-    <p>
-        <form:label path="description">Description</form:label>
-        <form:errors path="description"/>
-        <form:textarea path="description"/>
-    </p>
     <input type="submit" value="Submit"/>
 </form:form>
 </body>
